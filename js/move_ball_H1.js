@@ -8,18 +8,18 @@ var massa = 1.0;
 var xball, yball, yi, ys, tint;
 var isMoveBall = false;
 var nh = 20;
-var scaleY = 130000; // ÚÓ˜ÂÍ/Ï
+var scaleY = 130000; // —Ç–æ—á–µ–∫/–º
 var y0 = 14;
 var t0, ti, ytmp, q, r0;
 var v= new Array(2);
 var dt = 0.04;
 var g = 9.81;
-var eta = 18e-6; //œ‡*Ò
-var ro = 900; // Í„/Ï^3
+var eta = 18e-6; //–ü–∞*—Å
+var ro = 900; // –∫–≥/–º^3
 var ne=1;
-var qelectron = 1.6e-19; //  Î
-var dir=1;// ‚ÌËÁ
-var dM=0.005;// 5 ÏÏ
+var qelectron = 1.6e-19; // –ö–ª
+var dir=1;// –≤–Ω–∏–∑
+var dM=0.005;// 5 –º–º
 var indexV=0;
 var Atimer;
 var Atmp, mg;
@@ -109,7 +109,7 @@ function prepareData()
 		q=n*qelectron;
 		var F=q*400/0.005;
 		v[1]=(F-mg)/Atmp;
-//console.log("prepareData v1= "+v[indexV]+" r0= "+r0+" t0= "+t0+" Atmp= "+Atmp+" mg= "+mg+" 400¬ v[1]= "+v[1]+" F= "+F+" (v1+v2)Atmp= "+(v[indexV]+v[1])*Atmp)
+//console.log("prepareData v1= "+v[indexV]+" r0= "+r0+" t0= "+t0+" Atmp= "+Atmp+" mg= "+mg+" 400–í v[1]= "+v[1]+" F= "+F+" (v1+v2)Atmp= "+(v[indexV]+v[1])*Atmp)
 }
 //========================================================
 function run1()
@@ -123,7 +123,7 @@ function run1()
         	ti=0;
         	dir=1;
         	isMoveBall=false;
-        	refObj("OnOff").innerHTML="¬ÍÎ";
+        	refObj("OnOff").innerHTML="“ö–æ—Å—É";
         	onOff=true;
   		    U=0;
 	    }
