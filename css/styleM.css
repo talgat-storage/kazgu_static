@@ -1,58 +1,69 @@
-td{color:#000000;
-font-size:15px;
-font-style:normal;
-font-weight:bold;
-font-family:serif,Arial,Times;
-text-align:center;
-text-indent:2px;
-margin-bottom:0;
-margin-top:0;
+td {
+    color: #000000;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold;
+    font-family: serif, Arial, Times;
+    text-align: center;
+    text-indent: 2px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
-input{color:#000000;
-font-size:12px;
-font-style:normal;
-font-weight:normal;
-font-family:Arial,serif,Times;
-text-align:center;
-text-indent:2px;
-margin-bottom:0;
-margin-top:0;
+
+input {
+    color: #000000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: Arial, serif, Times;
+    text-align: center;
+    text-indent: 2px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
-h3{color:#484aaa;
-font-size:30px;
-font-style:italic;
-font-weight:bold;
-font-family:serif,Arial,Times;
-text-align:center;
-display: inline-block;
+
+h3 {
+    color: #484aaa;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: serif, Arial, Times;
+    text-align: center;
+    display: inline-block;
 }
-div.H{font-weight: bold;
-font-family:serif,Times,Arial;
-text-align: justify;
-text-indent: 30px;
-margin-bottom: 0px;
-margin-top:0px;
-width:95%;
-margin-left:30px;
+
+div.H {
+    font-weight: bold;
+    font-family: serif, Times, Arial;
+    text-align: justify;
+    text-indent: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: 95%;
+    margin-left: 30px;
 }
-ol{color:#484aaa;
-margin-left: 2px;
+
+ol {
+    color: #484aaa;
+    margin-left: 2px;
 }
-li{
-text-align: justify;
-font-size:14px;
-font-style:normal;
-font-weight:bold;
-font-family:serif,Times,Arial;
-margin-top: 5px;
-margin-left: 2px;
-margin-bottom: 3px;
-margin-right: 3px;
+
+li {
+    text-align: justify;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    font-family: serif, Times, Arial;
+    margin-top: 5px;
+    margin-left: 2px;
+    margin-bottom: 3px;
+    margin-right: 3px;
 }
-p.f{
-	font-size:18px;
-	font-weight:normal;
-	margin-top: 0;
-	margin-bottom: 0;
-	text-align:center
+
+p.f {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center
 }

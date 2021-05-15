@@ -42,6 +42,7 @@ header .stuts span {
     font-weight:bold;
     margin-left:5px;
 } */
+
 .container {
     color: #000;
     margin: 20px auto;
@@ -50,6 +51,8 @@ header .stuts span {
     width: 302px;
     height: 269px;
 }
+
+
 /*.controls {
     border: 1px dashed gray;
     color: #000;

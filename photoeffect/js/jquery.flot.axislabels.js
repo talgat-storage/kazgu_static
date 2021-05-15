@@ -1,5 +1,5 @@
-﻿(function ($) {
-    var options = { };
+﻿(function($) {
+    var options = {};
 
     function init(plot) {
         // This is kind of a hack. There are no hooks in Flot between
@@ -11,12 +11,13 @@
         // the first time to get the tick measurements, so that we can change
         // them, and then have it draw it again.
         var secondPass = false;
-        plot.hooks.draw.push(function (plot, ctx) {
+        plot.hooks.draw.push(function(plot, ctx) {
             if (!secondPass) {
                 // MEASURE AND SET OPTIONS
                 $.each(plot.getAxes(), function(axisName, axis) {
                     var opts = axis.options // Flot 0.7
-                        || plot.getOptions()[axisName]; // Flot 0.6
+                        ||
+                        plot.getOptions()[axisName]; // Flot 0.6
                     if (!opts || !opts.axisLabel)
                         return;
 
@@ -61,7 +62,8 @@
                 // DRAW
                 $.each(plot.getAxes(), function(axisName, axis) {
                     var opts = axis.options // Flot 0.7
-                        || plot.getOptions()[axisName]; // Flot 0.6
+                        ||
+                        plot.getOptions()[axisName]; // Flot 0.6
                     if (!opts || !opts.axisLabel)
                         return;
 
@@ -70,19 +72,19 @@
                         var ctx = plot.getCanvas().getContext('2d');
                         ctx.save();
                         ctx.font = opts.axisLabelFontSizePixels + 'px ' +
-                                opts.axisLabelFontFamily;
+                            opts.axisLabelFontFamily;
                         var width = ctx.measureText(opts.axisLabel).width;
                         var height = opts.axisLabelFontSizePixels;
                         var x, y;
                         if (axisName.charAt(0) == 'x') {
-                            x = plot.getPlotOffset().left + plot.width()/2 - width/2;
+                            x = plot.getPlotOffset().left + plot.width() / 2 - width / 2;
                             y = plot.getCanvas().height;
                         } else {
                             x = height * 0.72;
-                            y = plot.getPlotOffset().top + plot.height()/2 - width/2;
+                            y = plot.getPlotOffset().top + plot.height() / 2 - width / 2;
                         }
                         ctx.translate(x, y);
-                        ctx.rotate((axisName.charAt(0) == 'x') ? 0 : -Math.PI/2);
+                        ctx.rotate((axisName.charAt(0) == 'x') ? 0 : -Math.PI / 2);
                         ctx.fillText(opts.axisLabel, 0, 0);
                         ctx.restore();
 
@@ -91,10 +93,10 @@
                         plot.getPlaceholder().find('#' + axisName + 'Label').remove();
                         var elem = $('<div id="' + axisName + 'Label" " class="axisLabels" style="position:absolute;">' + opts.axisLabel + '</div>');
                         if (axisName.charAt(0) == 'x') {
-                            elem.css('left', plot.getPlotOffset().left + plot.width()/2 - elem.outerWidth()/2 + 'px');
+                            elem.css('left', plot.getPlotOffset().left + plot.width() / 2 - elem.outerWidth() / 2 + 'px');
                             elem.css('bottom', '0px');
                         } else {
-                            elem.css('top', plot.getPlotOffset().top + plot.height()/2 - elem.outerHeight()/2 + 'px');
+                            elem.css('top', plot.getPlotOffset().top + plot.height() / 2 - elem.outerHeight() / 2 + 'px');
                             elem.css('left', '0px');
                         }
                         plot.getPlaceholder().append(elem);

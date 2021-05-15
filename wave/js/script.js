@@ -15,7 +15,7 @@ function toggleFunc(i) {
 }
 
 // Draw a sine curve at time t
-function animateSine (t) {
+function animateSine(t) {
     data = [];
     data2 = [];
 
@@ -29,9 +29,9 @@ function animateSine (t) {
     for (i = 0; i < 4 * Math.PI; i += 0.2) {
         if (fmode == 1) {
             data.push([i, Math.sin(i - offset)]);
-            data2.push([i, Math.sin(i*2 - offset)]);
+            data2.push([i, Math.sin(i * 2 - offset)]);
         } else if (fmode == 2) {
-            data.push([i, Math.sin(1/(i-offset))]);
+            data.push([i, Math.sin(1 / (i - offset))]);
             // data2.push([i, Math.sin(1/(i*2-offset))]);
         }
     }
@@ -41,17 +41,17 @@ function animateSine (t) {
     switch (mode) {
         case 1:
             properties = {
-                yaxis : {
-                    max : 2,
-                    min : -2
+                yaxis: {
+                    max: 2,
+                    min: -2
                 }
             };
             break;
         case 2:
             properties = {
-                yaxis : {
-                    max : 2,
-                    min : -2
+                yaxis: {
+                    max: 2,
+                    min: -2
                 },
                 bars: {
                     show: true,
@@ -63,9 +63,9 @@ function animateSine (t) {
             break;
         case 3:
             properties = {
-                yaxis : {
-                    max : 2,
-                    min : -2
+                yaxis: {
+                    max: 2,
+                    min: -2
                 },
                 radar: {
                     show: true
@@ -78,9 +78,9 @@ function animateSine (t) {
             break;
         case 4:
             properties = {
-                yaxis : {
-                    max : 2,
-                    min : -2
+                yaxis: {
+                    max: 2,
+                    min: -2
                 },
                 bubbles: {
                     show: true,
@@ -92,13 +92,13 @@ function animateSine (t) {
 
     // draw graph
     if (fmode == 1) {
-        graph = Flotr.draw(container, [ data, data2 ], properties);
+        graph = Flotr.draw(container, [data, data2], properties);
     } else if (fmode == 2) {
-        graph = Flotr.draw(container, [ data ], properties);
+        graph = Flotr.draw(container, [data], properties);
     }
 
     // main loop
-    setTimeout(function () {
+    setTimeout(function() {
         animateSine((new Date).getTime());
     }, 50);
 }
