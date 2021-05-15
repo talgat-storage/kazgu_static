@@ -80,8 +80,10 @@
 	function run() {
 	    paint1();
 	    itime++;
-	    if (itime == 2) { clearInterval(Atimer);
-	        formInit(); }
+	    if (itime == 2) {
+	        clearInterval(Atimer);
+	        formInit();
+	    }
 	}
 
 	function mousePressed(e) {

@@ -299,11 +299,13 @@
         xn += dxn;
         yn += dyn;
         n++;
-        if (n == count) { clearInterval(Btimer);
+        if (n == count) {
+            clearInterval(Btimer);
             xf = xn;
             yf = yn;
             init_process();
-            dispatcher() }
+            dispatcher()
+        }
         if (CheckRange(xn, 1, width - 8)) {
             if (number_process < 4) {
                 dxn = -dxn;
@@ -358,8 +360,10 @@
         xa = defineNuclear(xn);
         ya = defineNuclear(yn);
         //initXY();
-        if (number_process < 4) { isExcit = true;
-            paint(); }
+        if (number_process < 4) {
+            isExcit = true;
+            paint();
+        }
         //  console.log("dispatcher isExcit= "+isExcit)
 
         switch (number_process) {

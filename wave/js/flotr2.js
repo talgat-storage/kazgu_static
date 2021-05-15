@@ -3506,16 +3506,24 @@ Flotr.Date = {
                 x = data[i][0];
                 y = data[i][1];
                 if (x !== null) {
-                    if (x < xmin) { xmin = x;
-                        xused = true; }
-                    if (x > xmax) { xmax = x;
-                        xused = true; }
+                    if (x < xmin) {
+                        xmin = x;
+                        xused = true;
+                    }
+                    if (x > xmax) {
+                        xmax = x;
+                        xused = true;
+                    }
                 }
                 if (y !== null) {
-                    if (y < ymin) { ymin = y;
-                        yused = true; }
-                    if (y > ymax) { ymax = y;
-                        yused = true; }
+                    if (y < ymin) {
+                        ymin = y;
+                        yused = true;
+                    }
+                    if (y > ymax) {
+                        ymax = y;
+                        yused = true;
+                    }
                 }
             }
 
@@ -6769,13 +6777,23 @@ Flotr.addType('timeline', {
                         } else {
                             var styles = { position: 'absolute', 'zIndex': '2', 'border': '1px solid ' + legend.labelBoxBorderColor };
 
-                            if (p.charAt(0) == 'n') { styles.top = (m + plotOffset.top) + 'px';
-                                styles.bottom = 'auto'; } else if (p.charAt(0) == 'c') { styles.top = (m + (this.plotHeight - legendHeight) / 2) + 'px';
-                                styles.bottom = 'auto'; } else if (p.charAt(0) == 's') { styles.bottom = (m + plotOffset.bottom) + 'px';
-                                styles.top = 'auto'; }
-                            if (p.charAt(1) == 'e') { styles.right = (m + plotOffset.right) + 'px';
-                                styles.left = 'auto'; } else if (p.charAt(1) == 'w') { styles.left = (m + plotOffset.left) + 'px';
-                                styles.right = 'auto'; }
+                            if (p.charAt(0) == 'n') {
+                                styles.top = (m + plotOffset.top) + 'px';
+                                styles.bottom = 'auto';
+                            } else if (p.charAt(0) == 'c') {
+                                styles.top = (m + (this.plotHeight - legendHeight) / 2) + 'px';
+                                styles.bottom = 'auto';
+                            } else if (p.charAt(0) == 's') {
+                                styles.bottom = (m + plotOffset.bottom) + 'px';
+                                styles.top = 'auto';
+                            }
+                            if (p.charAt(1) == 'e') {
+                                styles.right = (m + plotOffset.right) + 'px';
+                                styles.left = 'auto';
+                            } else if (p.charAt(1) == 'w') {
+                                styles.left = (m + plotOffset.left) + 'px';
+                                styles.right = 'auto';
+                            }
 
                             var div = D.create('div'),
                                 size;
